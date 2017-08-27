@@ -1,0 +1,16 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_data.title }}</title>
+    {% render_bundle 'main' 'css' %}
+</head>
+<body>
+    <div id="root"></div>
+    {% render_bundle 'manifest' %}
+    {% render_bundle 'normalize' %}
+    {% render_bundle 'vendor' %}
+    {% render_bundle 'main' 'js' %}
+</body>
+</html>
